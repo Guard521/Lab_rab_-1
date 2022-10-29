@@ -11,7 +11,6 @@ tokenization = [word for word in tokens if not word in stopwords.words('english'
 print(text)
 print(tokens)
 print(tokenization)
-print(corpus)
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(corpus)
 Y = vectorizer.fit_transform(tokens)

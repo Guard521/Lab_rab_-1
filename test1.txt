@@ -5,7 +5,10 @@ using namespace std;
 int main() 
 { 
     int X;
+    int Y,C,B;
     cin >> X; 
+    Y+=X;
+    cout << Y;
     cout << "Hello, world!" << endl;
     cout << "Hello, git!" << endl;
     cout << X << endl;
