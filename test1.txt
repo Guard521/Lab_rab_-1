@@ -8,7 +8,7 @@ int main()
     int Y,C,B;
     cin >> X; 
     Y+=X;
-    cout << Y;
+    cout << Y << endl;
     cout << "Hello, world!" << endl;
     cout << "Hello, git!" << endl;
     cout << X << endl;
