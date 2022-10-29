@@ -1,0 +1,18 @@
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from sklearn.feature_extraction.text import CountVectorizer
+nltk.download('stopwords')
+nltk.download('punkt')
+text = "Backgammon is one of the oldest known board games. Its history can be traced back nearly 5,000 years to archeological discoveries in the Middle East. It is a two player game where each player has fifteen checkers which move between twenty-four points according to the roll of two dice."
+corpus = ["I like this movie, it's funny.", 'I hate this movie.', 'This was awesome! I like it.', 'Nice one. I love it.']
+tokens = word_tokenize(text)
+tokenization = [word for word in tokens if not word in stopwords.words('english')]
+print(text)
+print(tokens)
+print(tokenization)
+print(corpus)
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(corpus)
+vectorizer.get_feature_names_out()
+print(X.toarray())
